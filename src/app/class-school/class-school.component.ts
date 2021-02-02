@@ -12,7 +12,8 @@ export class ClassSchoolComponent implements OnInit {
       name: "Ragav",
       gender: "Male",
       guardian: "Ramesh",
-      standard: 8 
+      standard: 8
+   
   }
   constructor() { }
 
