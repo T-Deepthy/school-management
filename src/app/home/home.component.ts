@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {students} from '../common'
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor() { 
+  }
 
   ngOnInit(): void {
   }

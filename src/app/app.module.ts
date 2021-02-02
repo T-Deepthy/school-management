@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { EightComponent } from './eight/eight.component';
 import { NineComponent } from './nine/nine.component';
 import { TenComponent } from './ten/ten.component';
+import { EditComponent } from './pages/students/edit/edit.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,6 +18,7 @@ import { TenComponent } from './ten/ten.component';
     EightComponent,
     NineComponent,
     TenComponent,
+    EditComponent,
   ],
   imports: [
     BrowserModule,
