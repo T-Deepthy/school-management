@@ -12,16 +12,24 @@ import { StudentService } from 'src/app/services/student.service';
 export class EditComponent implements OnInit {
   id!: number;
   header!: string;
+  student: Student = { 
+    id: 0,
+    age: 0,
+    name: "",
+    guardian: "",
+    gender: "",
+    class: 0
+ }
   constructor(private route: ActivatedRoute,private router: Router,private studentService: StudentService) { }
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       this.id = params.id
-      console.log("params.id",params.id)
     })
     this.header = this.id === 0 ? 'Add Student' : 'Edit student';
-    console.log("header",this.header)
-
+    if (this.id != 0) { 
+  this.student=this.studentService.onGetStudent(this.id)!
+}
   }
   onSubmit(form: NgForm) { 
     let student: Student = { 
@@ -33,7 +41,13 @@ export class EditComponent implements OnInit {
       class: form.value.class
       
     }
+    if (this.id === 0) { 
     this.studentService.onAdd(student)
+      
+    }
+    else { 
+      this.studentService.onUpdate(student)
+    }
     this.router.navigateByUrl('')
 }
 }   

@@ -22,7 +22,7 @@
                 <td>{{student.gender}}</td>
                 <td>{{student.guardian}}</td>
                 <td>{{student.class}}</td>
-                <td><a [routerLink]="['student/edit',student.id]">Edit</a></td>
+                <td><a [routerLink]="['student/edit/',student.id]">Edit</a></td>
                 <td><button (click)="onDelete(student.id)">x</button></td>
              </tr>
         </tbody>

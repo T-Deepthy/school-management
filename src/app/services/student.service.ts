@@ -33,13 +33,24 @@ export class StudentService {
   onGet() { 
     return this.students
   }
+  onGetStudent(id: Number) { 
+return this.students.find(x=>x.id===id)
+  }
   onAdd(student: Student) { 
     this.students.push(student)
   }
   onDelete(id: number) { 
     let student = this.students.find(x => x.id === id)
-    console.log("stud",student)
     let index = this.students.indexOf(student!, 0)
     this.students.splice(index,1)
+  }
+  onUpdate(student: Student) {
+    let oldStudent = this.students.find(x => x.id === student.id);
+    oldStudent!.name = student.name;
+    oldStudent!.age = student.age;
+    oldStudent!.guardian = student.guardian;
+    oldStudent!.class = student.class;
+    oldStudent!.gender = student.gender;
+
   }
 }

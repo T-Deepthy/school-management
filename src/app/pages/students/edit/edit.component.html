@@ -5,24 +5,24 @@
     <form (ngSubmit)="onSubmit(f)" #f="ngForm">
         <div class="form-group">
             <label for="">ID</label>
-            <input type="text" class="form-control" ngModel name="id">
+            <input type="text" class="form-control" [ngModel]="student.id" name="id">
         </div>
         <div class="form-group">
             <label for="">Name</label>
-            <input type="text" class="form-control" ngModel name="name">
+            <input type="text" class="form-control" [ngModel]="student.name" name="name">
         </div><div class="form-group">
             <label for="">Gender</label>
-            <input type="text" class="form-control" ngModel name="gender">
+            <input type="text" class="form-control" [ngModel]="student.gender" name="gender">
         </div><div class="form-group">
             <label for="">Age</label>
-            <input type="text" class="form-control" ngModel name="age">
+            <input type="text" class="form-control" [ngModel]="student.age" name="age">
         </div><div class="form-group">
             <label for="">Guardian</label>
-            <input type="text" class="form-control" ngModel name="guardian">
+            <input type="text" class="form-control" [ngModel]="student.guardian" name="guardian">
         </div>
         <div class="form-group">
             <label for="">Class</label>
-            <input type="text" class="form-control" ngModel name="class">
+            <input type="text" class="form-control" [ngModel]="student.class" name="class">
         </div>
         <div class="form-group">
             <button type="submit">Save</button>
