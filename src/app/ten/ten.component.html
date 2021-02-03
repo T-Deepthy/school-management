@@ -1,8 +1,30 @@
-<div class="padding"><h4>Statitic report for class 10</h4>
-<button class="add" (click)="formAdd" >ADD</button>
-<button class="edit">EDIT</button>
-<button class="delete">DELETE</button>
-<div id="input-form">
-    <input />
-</div>
-</div> 
+<div class="padding">
+    <!-- <h4>Statitic report for class 9</h4>
+    <button class="add" >ADD</button>
+    <button class="edit">EDIT</button>
+    <button class="delete">DELETE</button> -->
+    <h1>List Students</h1>
+    <a class="btn btn-primary mb-4" routerLink="student/add/0">Add Student</a>
+    <table>
+        <thead>
+            <th>ID</th>
+            <th>Age</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Guardian</th>
+            <th>Class</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let student of students">
+                <td>{{student.id}}</td>
+                <td>{{student.age}}</td>
+                <td>{{student.name}}</td>
+                <td>{{student.gender}}</td>
+                <td>{{student.guardian}}</td>
+                <td>{{student.class}}</td>
+                <td><a [routerLink]="['student/edit/',student.id]">Edit</a></td>
+                <td><button (click)="onDelete(student.id)">x</button></td>
+             </tr>
+        </tbody>
+    </table>
+    </div>

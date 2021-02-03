@@ -12,8 +12,11 @@ const routes: Routes = [
   { path: 'nines', component: NineComponent },
   { path: 'ten', component: TenComponent },
   { path: 'nines/student/add/:id', component: EditComponent },
-  {path: 'nines/student/edit/:id', component: EditComponent }
-
+  { path: 'nines/student/edit/:id', component: EditComponent },
+  { path: 'eigth/student/add/:id', component: EditComponent },
+  { path: 'eigth/student/edit/:id', component: EditComponent },
+  { path: 'ten/student/add/:id', component: EditComponent },
+  {path: 'ten/student/edit/:id', component: EditComponent }
 ];
 
 @NgModule({

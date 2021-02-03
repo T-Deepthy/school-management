@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { ChartsModule } from 'ng2-charts';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ClassSchoolComponent } from './class-school/class-school.component';
@@ -23,7 +24,7 @@ import { EditComponent } from './pages/students/edit/edit.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    
+    ChartsModule,
       FormsModule
    
   ],

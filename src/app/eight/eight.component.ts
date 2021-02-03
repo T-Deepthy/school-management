@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Student } from '../models/student.model';
+import { StudentService } from '../services/student.service';
 
 @Component({
   selector: 'app-eight',
@@ -6,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./eight.component.css']
 })
 export class EightComponent implements OnInit {
-
-  constructor() { }
+  students!: Student[];
+  constructor(private studentService:StudentService) { }
 
   ngOnInit(): void {
-  }
-
+    this.students=this.studentService.onGet();}
+    onDelete(id: number ) { 
+      this.studentService.onDelete(id)
+        }
 }
