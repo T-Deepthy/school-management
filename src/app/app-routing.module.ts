@@ -8,15 +8,15 @@ import { TenComponent } from './ten/ten.component';
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  { path: 'eigth', component: EightComponent },
-  { path: 'nines', component: NineComponent },
-  { path: 'ten', component: TenComponent },
-  { path: 'nines/student/add/:id', component: EditComponent },
-  { path: 'nines/student/edit/:id', component: EditComponent },
-  { path: 'eigth/student/add/:id', component: EditComponent },
-  { path: 'eigth/student/edit/:id', component: EditComponent },
-  { path: 'ten/student/add/:id', component: EditComponent },
-  {path: 'ten/student/edit/:id', component: EditComponent }
+  { path: 'eighth', component: EightComponent },
+  { path: 'ninth', component: NineComponent },
+  { path: 'tenth', component: TenComponent },
+  { path: 'ninth/student/add/:id', component: EditComponent },
+  { path: 'ninth/student/edit/:id', component: EditComponent },
+  { path: 'eighth/student/add', component: EditComponent },
+  { path: 'eighth/student/edit/:id', component: EditComponent },
+  { path: 'tenth/student/add/:id', component: EditComponent },
+  {path: 'tenth/student/edit/:id', component: EditComponent }
 ];
 
 @NgModule({

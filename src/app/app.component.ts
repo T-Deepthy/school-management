@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { StudentService } from 'src/app/services/student.service';
 import {students} from '../app/common'
 @Component({
   selector: 'app-root',
@@ -7,8 +8,11 @@ import {students} from '../app/common'
 })
 export class AppComponent {
   title = 'school-management';
-  constructor() {
-    localStorage.setItem("students",JSON.stringify(students))
-
+  constructor(private studentService: StudentService) {
+    this.studentService.getGendercount()
+  }
+  ngOnChanges() { 
+    this.studentService.getGendercount()
+    
   }
 }

@@ -12,7 +12,8 @@ export class EightComponent implements OnInit {
   constructor(private studentService:StudentService) { }
 
   ngOnInit(): void {
-    this.students=this.studentService.onGet();}
+    this.students=this.studentService.onGet();
+  }
     onDelete(id: number ) { 
       this.studentService.onDelete(id)
         }

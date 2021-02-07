@@ -4,7 +4,7 @@
     <button class="edit">EDIT</button>
     <button class="delete">DELETE</button> -->
     <h1>List Students</h1>
-    <a class="btn btn-primary mb-4" routerLink="student/add/0">Add Student</a>
+    <a class="btn btn-primary mb-4" routerLink="student/add">Add Student</a>
     <table>
         <thead>
             <th>ID</th>
@@ -16,14 +16,14 @@
         </thead>
         <tbody>
             <tr *ngFor="let student of students">
-                <td>{{student.id}}</td>
-                <td>{{student.age}}</td>
-                <td>{{student.name}}</td>
-                <td>{{student.gender}}</td>
-                <td>{{student.guardian}}</td>
-                <td>{{student.class}}</td>
-                <td><a [routerLink]="['student/edit/',student.id]">Edit</a></td>
-                <td><button (click)="onDelete(student.id)">x</button></td>
+                <td *ngIf="student.class==8">{{student.id}}</td>
+                <td *ngIf="student.class==8">{{student.age}}</td>
+                <td *ngIf="student.class==8">{{student.name}}</td>
+                <td *ngIf="student.class==8">{{student.gender}}</td>
+                <td *ngIf="student.class==8">{{student.guardian}}</td>
+                <td *ngIf="student.class==8">{{student.class}}</td>
+                <td *ngIf="student.class==8"><a [routerLink]="['student/edit/',student.id]">Edit</a></td>
+                <td *ngIf="student.class==8"><button (click)="onDelete(student.id)">x</button></td>
              </tr>
         </tbody>
     </table>

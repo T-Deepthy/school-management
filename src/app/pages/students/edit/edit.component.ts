@@ -23,12 +23,13 @@ export class EditComponent implements OnInit {
   constructor(private route: ActivatedRoute, private router: Router, private studentService: StudentService) { }
 
   ngOnInit(): void {
+    console.log("bbbbbbb",this.router.url)
     this.route.params.subscribe(params => {
       console.log("params",params)
       this.id = params.id
     })
     this.header = this.studentService.checkUserExist(this.id)! ? 'Edit student' : 'Add Student';
-    this.student  = (this.studentService.onGetStudent(this.id)!) || {};
+    this.student = (this.studentService.onGetStudent((this.id),this.router.url)) || {};
   }
 
   onSubmit(form: NgForm) {

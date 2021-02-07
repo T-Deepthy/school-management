@@ -15,15 +15,15 @@
             <th>Class</th>
         </thead>
         <tbody>
-            <tr *ngFor="let student of students">
-                <td>{{student.id}}</td>
-                <td>{{student.age}}</td>
-                <td>{{student.name}}</td>
-                <td>{{student.gender}}</td>
-                <td>{{student.guardian}}</td>
-                <td>{{student.class}}</td>
-                <td><a [routerLink]="['student/edit/',student.id]">Edit</a></td>
-                <td><button (click)="onDelete(student.id)">x</button></td>
+            <tr *ngFor="let student of students" >
+                <td *ngIf="student.class==9">{{student.id}}</td>
+                <td *ngIf="student.class==9">{{student.age}}</td>
+                <td *ngIf="student.class==9">{{student.name}}</td>
+                <td *ngIf="student.class==9">{{student.gender}}</td>
+                <td *ngIf="student.class==9">{{student.guardian}}</td>
+                <td *ngIf="student.class==9">{{student.class}}</td>
+                <td *ngIf="student.class==9"><a [routerLink]="['student/edit/',student.id]">Edit</a></td>
+                <td *ngIf="student.class==9"><button (click)="onDelete(student.id)">x</button></td>
              </tr>
         </tbody>
     </table>
