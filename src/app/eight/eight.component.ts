@@ -40,7 +40,7 @@ export class EightComponent implements OnInit {
     responsive: true,
     scales: { xAxes: [{}], yAxes: [{}] },
   };
-  barChartMFLabels: Label[] = ['Class 8-10'];
+  barChartMFLabels: Label[] = ['Class 8'];
   barChartMFType: ChartType = 'bar';
   barChartMFLegend = true;
   barChartMFPlugins = [];

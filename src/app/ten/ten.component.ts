@@ -41,7 +41,7 @@ export class TenComponent implements OnInit {
     responsive: true,
     scales: { xAxes: [{}], yAxes: [{}] },
   };
-  barChartMFLabels: Label[] = ['Class 8-10'];
+  barChartMFLabels: Label[] = ['Class 10'];
   barChartMFType: ChartType = 'bar';
   barChartMFLegend = true;
   barChartMFPlugins = [];
