@@ -11,7 +11,7 @@ export class StudentService {
     gender: "Male",
     guardian: "ad",
     class: 8,
-    id:1
+    id:81
   },
   {
     age: 15,
@@ -19,7 +19,7 @@ export class StudentService {
     gender: "Female",
     guardian: "ad",
     class: 9,
-    id:1
+    id:91
     },
     {
       age: 16,
@@ -27,7 +27,7 @@ export class StudentService {
       gender: "Male",
       guardian: "ad",
       class: 10,
-      id:1
+      id:101
     },
   {
       age: 16,
@@ -35,7 +35,7 @@ export class StudentService {
       gender: "Male",
       guardian: "ad",
       class: 10,
-      id:2
+      id:102
     },
   {
     age: 15,
@@ -43,14 +43,14 @@ export class StudentService {
     gender: "Female",
     guardian: "ad",
     class: 9,
-    id:2
+    id:92
     },{
     age: 15,
     name: "abcs",
     gender: "Female",
     guardian: "ad",
     class: 8,
-    id:2
+    id:82
     },] 
   
   constructor() { 
@@ -94,7 +94,7 @@ export class StudentService {
       
     }
     let result = this.students.find(x => x.id === Number(id));
-    return result || { id: (this.students[this.students.length-1].id+1)!,class:param };
+    return result || { id: ((this.students[this.students.length-1].id+1)+param*10)!,class:param };
   }
   checkUserExist(id: number) {
     return this.students.find(x=>x.id===Number(id));
