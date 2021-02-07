@@ -27,4 +27,13 @@
              </tr>
         </tbody>
     </table>
+    <div class="chartjs-container">
+        <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+            [plugins]="barChartPlugins" [legend]="barChartLegend" [chartType]="barChartType">
+        </canvas>
+    </div>
+    <div class="chartjs-container">
+        <canvas baseChart [datasets]="barChartMFData" [labels]="barChartMFLabels" [options]="barChartMFOptions"
+            [plugins]="barChartMFPlugins" [legend]="barChartMFLegend" [chartType]="barChartMFType">
+        </canvas>
     </div>
