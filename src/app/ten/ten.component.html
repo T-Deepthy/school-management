@@ -23,7 +23,7 @@
                 <td *ngIf="student.class==10">{{student.guardian}}</td>
                 <td *ngIf="student.class==10">{{student.class}}</td>
                 <td *ngIf="student.class==10"><a [routerLink]="['student/edit/',student.id]">Edit</a></td>
-                <td *ngIf="student.class==10"><button (click)="onDelete(student.id)">x</button></td>
+                <td *ngIf="student.class==10"><button (click)="onDelete(student.id)" class="btn">x</button></td>
              </tr>
         </tbody>
     </table>
